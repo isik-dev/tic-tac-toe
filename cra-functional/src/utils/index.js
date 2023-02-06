@@ -1,3 +1,9 @@
+import Square from 'components/Square';
+
+const renderSquare = (i, { onClick, squares }) => {
+  return <Square onClick={() => onClick(i)} value={squares[i]} />;
+};
+
 /**
  * @param {Array<number>} squares
  * @returns X | O
@@ -22,5 +28,5 @@ function calculateWinner(squares) {
 }
 
 export function utils() {
-  return { calculateWinner };
+  return { calculateWinner, renderSquare };
 }
