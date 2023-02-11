@@ -65,6 +65,7 @@ class Game extends React.Component {
       stepNumber: step,
       xIsNext: step % 2 === 0,
     });
+    console.log('class jumpTo state', this.state);
   }
 
   handleClick(i) {
@@ -78,6 +79,7 @@ class Game extends React.Component {
       history: history.concat([{ squares: squares }]),
       xIsNext: !this.state.xIsNext,
     });
+    console.log('class state', this.state);
   }
 
   render() {
